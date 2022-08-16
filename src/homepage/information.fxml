@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homepage.InformationController">
+   <children>
+      <ImageView fitHeight="515.0" fitWidth="679.0" layoutX="-14.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backGraund_PERFICT.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutY="-4.0" prefHeight="509.0" prefWidth="650.0">
+         <top>
+            <Pane prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="192.0" layoutY="58.0" prefHeight="57.0" prefWidth="279.0" text="Player information" textFill="#8461b7">
+                     <font>
+                        <Font name="MV Boli" size="29.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="24.0" layoutX="5.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../HomePage.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="goHomeButton" contentDisplay="GRAPHIC_ONLY" layoutX="2.0" layoutY="7.0" mnemonicParsing="false" onAction="#goHomeButton" opacity="0.0" prefHeight="52.0" prefWidth="30.0" textAlignment="JUSTIFY">
+                     <effect>
+                        <DropShadow spread="0.53">
+                           <color>
+                              <Color red="0.37062621116638184" green="0.04946393892168999" blue="0.7631579041481018" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Label layoutX="3.0" layoutY="25.0" prefHeight="17.0" prefWidth="29.0" text="       ">
+                     <tooltip>
+                        <Tooltip text="GO HOME" />
+                     </tooltip>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="226.0" prefWidth="759.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="16.0" layoutY="13.0" prefHeight="195.0" prefWidth="570.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="136.0" layoutY="14.0" prefHeight="225.0" prefWidth="184.0" spacing="15.0">
+                                 <children>
+                                    <Label lineSpacing="10.0" prefHeight="44.0" prefWidth="148.0" text="your Name:" textFill="#8461b7">
+                                       <font>
+                                          <Font name="MV Boli" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="40.0" prefWidth="142.0" text="your Email:" textFill="#8461b7">
+                                       <font>
+                                          <Font name="MV Boli" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="PhoneNumber:" textFill="#8461b7">
+                                       <font>
+                                          <Font name="MV Boli" size="21.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="22.0" prefHeight="196.0" prefWidth="237.0" spacing="15.0">
+                                 <children>
+                                    <TextField fx:id="nameText" prefHeight="32.0" prefWidth="190.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="5.0" />
+                                       </opaqueInsets>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="emailText" prefHeight="31.0" prefWidth="198.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="5.0" />
+                                       </opaqueInsets>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="phoneNumText" prefHeight="31.0" prefWidth="196.0">
+                                       <opaqueInsets>
+                                          <Insets bottom="5.0" />
+                                       </opaqueInsets>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="ErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-119.0" layoutY="176.0" prefHeight="32.0" prefWidth="379.0" textFill="#d23838">
+                                 <font>
+                                    <Font name="MV Boli" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <Pane prefHeight="147.0" prefWidth="759.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="startChoseButton" layoutX="374.0" layoutY="-2.0" mnemonicParsing="false" onAction="#startChoseButtonAction" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #9b7dc7;" text="START" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="clearButton" layoutX="198.0" layoutY="-2.0" mnemonicParsing="false" onAction="#clearButtonAction" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #9b7dc7;" text="CLEAR" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
